@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto LLMM 1DAW Primer Trimestre</title>
+    <style>
+        body{
+            background-color: rgba(10, 199, 233, 0.801);
+        }
+        #portarretrato {
+            width: 50vw;
+            height: 50vh;
+            background-color: rgba(22, 199, 230, 0.863);
+            display: block;
+        }
+
+        #foto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .centrarFoto{
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%, -50%);
+            -webkit-transform: translate(-50%,-50%);
+        }
+
+        @media screen and (orientation:landscape) {
+            #portarretrato {
+                max-width: 1200px;
+                max-height: 800px;
+            }
+        }
+
+        @media screen and (orientation:portrait) {
+            #portarretrato {
+                max-width: 600px;
+                max-height: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="centrarFoto">
+    <picture id="portarretrato">
+
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./foto3-h-1920.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./foto3-h-1920.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./foto3-h-1920.jpg" type="image/jpeg">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="./foto1-v-1200.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="./foto1-v-1200.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="./foto1-v-1200.jpg" type="image/jpg">
+
+        <source media="(orientation: landscape) and (min-width: 901px)" srcset="./foto4-h-800.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 901px)" srcset="./foto4-h-800.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 901px)" srcset="./foto4-h-800.jpg" type="image/jpeg">
+        <source media="(orientation: portrait) and (min-width:401px)" srcset="./foto2-v-600.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width:401px)" srcset="./foto2-v-600.jpg" type="image/jpg">
+
+        <img id="foto" alt="Imagenes de la fauna marina" title="El Fondo del mar" src="./Foto1-original.jpg" />
+    </picture>
+</div>
+</body>
+
+</html>
